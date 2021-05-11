@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./CartItem.module.css";
 
 //redux
@@ -18,7 +18,11 @@ const CartItem = ({ itemData, removeFromCart, adjustQty }) => {
   return (
     <>
       <div className={styles.cartItem}>
-        <img className={styles.cartItem__image} src={itemData.image} />
+        <img
+          className={styles.cartItem__image}
+          src={itemData.image}
+          alt={itemData.title}
+        />
         <div className={styles.cartItem__details}>
           <p className={styles.details__title}>{itemData.title}</p>
           <p className={styles.details__desc}>{itemData.description}</p>

@@ -13,7 +13,11 @@ const Product = ({ productData, addToCart, loadCurrentItem }) => {
   return (
     <>
       <div className={styles.product}>
-        <img className={styles.product__image} src={productData.image} />
+        <img
+          className={styles.product__image}
+          src={productData.image}
+          alt={productData.title}
+        />
 
         <div className={styles.product__details}>
           <p className={styles.details__title}>{productData.title}</p>
