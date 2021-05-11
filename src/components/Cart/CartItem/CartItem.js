@@ -9,7 +9,7 @@ import {
 } from "../../../redux/shopping/shopping-actions";
 
 const CartItem = ({ itemData, removeFromCart, adjustQty }) => {
-  const [input, setInput] = useState(0);
+  const [input, setInput] = useState(itemData.qty);
 
   const handleInput = (e) => {
     setInput(e.target.value);
